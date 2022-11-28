@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skyfy.inc</title>
+  </head>
+  <body style="background-color:aqua;">
+    <header style="background-color:rgba(128,128,128);">
+        <a href="https://www.google.com"><button>Home</button></a>
+        <a href="https://www.wikipedia.com"><button>About</button></a>
+        <a href="https://www.geeksforgeeks.com"><button>Contact Us</button></a>
+        <br><hr>
+    </header>
+    <h1 style="text-align:center;font-size:40px">Welcome to SKYFY<sup>&#169;</sup></h1>
+    <hr>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil sit
+      voluptatem commodi est, laudantium sed.
+    </p>
+    <h2><strong>A Poem</strong></h2>
+    <pre style="color:green;font-size: 90%;font-family:'Courier New';">
+       
+       Alone with time, he waits for his parents to wake,
+       a boy growing old at the dining room table,
+
+       pressing into the pages of one of his father's big books
+       the flowers he picked all morning
+
+       in his mother's garden, magnolia, hibiscus,
+       azalea, peony, pear, tulip, iris;
+
+    </pre>
+    <h3>Investors</h3>
+    <ul>
+        <li>Elon Musk</li>
+        <li>Sunil Chethri</li>
+        <li>M.S Dhoni</li>
+    </ul>
+    <h3>Core Team</h3>
+    <ol>
+        <li>Pratham Khatri</li>
+        <li>Mansi Singh</li>
+        <li>Ayush Kumar</li>
+        <li>Harshdeep Bakliwal</li>
+        <li>Yuvraj Kewalramani</li>
+        <li>Kapil Jangir</li>
+    </ol>
+    <footer style="text-align: center;">
+        SKYFY<sup>&#169;</sup> 2022
+    </footer>
+  </body>
+</html>
