@@ -13,7 +13,7 @@
         // while loop
         /*
         let n = prompt("Enter the value of n")
-        n = Number.parseInt👎
+        n = Number.parseInt
         
         let i = 0;
         while(i<n){
