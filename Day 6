@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript switch</h2>
+
+<p id="demo"></p>
+
+<script>
+let food;
+switch (new Date().getDay()) {
+  case 0:
+    food = "Butter Chicken";
+    break;
+  case 1:
+    food = "Salad and Paneer";
+    break;
+  case 2:
+    food = "Boiled Eggs and Mushroom";
+    break;
+  case 3:
+    food = "Boiled Chicken ";
+    break;
+  case 4:
+    food = "Vegetable salad with Sandwitch";
+    break;
+  case 5:
+    food = "Biryani";
+    break;
+  case  6:
+    food = "Oats";
+}
+document.getElementById("demo").innerHTML = "Today your diet is " + food;
+</script>
+
+</body>
+</html>
