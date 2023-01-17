@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Day7 of code streak</h2>
+
+<p>A real time-based greeting:</p>
+
+<p id="demo"></p>
+
+<script>
+const hour = new Date().getHours(); 
+let greeting;
+
+if (hour < 12) {
+  greeting = "Good morning";
+} else if(hour == 12){
+  greeting = "Good Afternoon";
+} else if(hour < 20){
+  greeting = "Good Evening"; 
+} else{
+  greeting = "Good Night";  
+}
+
+document.getElementById("demo").innerHTML = greeting;
+</script>
+
+</body>
+</html>
