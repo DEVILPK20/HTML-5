@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dat 20 of code streak</title>
+    <style>
+        #a{
+            width: 400px;
+            height: 400px;
+            background-color: bisque;
+            text-align: center;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <div id="a">
+            <button onclick="x()" style="margin-top: 170px;">clickme</button>
+        </div>
+    </div>
+    <div align="center">
+        <div>
+            <p id="b">Today is the last Day of my coding.</p>
+            <button onclick="y()" style="margin-top: 170px;">clickme</button>
+        </div>
+    </div>
+    <script>
+        function x(){
+            var r=Math.floor(Math.random()*255);
+            var g=Math.floor(Math.random()*255);
+            var b=Math.floor(Math.random()*255);
+            let mycolor="rgb("+r+","+g+","+b+")";
+            document.getElementById("a").style.background=mycolor;
+        }
+        function y(){
+            document.getElementById("b").innerHTML="Thank You for this wonderful opportunity.";
+            b.style.color="red";
+            b.style.background="beige";
+        }
+    </script>
+</body>
+</html>
