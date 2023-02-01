@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 19 of code streak </title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        * {
+            cursor: none;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        section {
+            min-height: 100vh;
+            background-color: rgb(41, 42, 46);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .cursor {
+            z-index: 100;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* border: 2px solid white; */
+            /* background-color: rgba(255, 255, 255, 0.356); */
+            height: 30px;
+            width: 30px;
+            border-radius: 50px;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .cursor::after,
+        .cursor::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            height: 10px;
+            width: 10px;
+            border-radius: 50px;
+        }
+
+        .cursor::before {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .cursor.click::before {
+            animation: click 1s ease forwards;
+            background-color: rgb(255, 255, 255);
+        }
+
+        @keyframes click {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(7);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <h1>Click on Screen,Randomly</h1>
+    </section>
+    <section></section>
+    <div class="cursor"></div>
+    <script>
+        const cursor = document.querySelector(".cursor");
+        window.addEventListener("mousemove", (e) => {
+            cursor.style.left = e.pageX + "px";
+            cursor.style.top = e.pageY + "px";
+            cursor.setAttribute("data-fromTop", cursor.offsetTop - scrollY);
+            // console.log(e)
+        });
+        window.addEventListener("scroll", () => {
+            const fromTop = cursor.getAttribute("data-fromTop");
+            cursor.style.top = scrollY + parseInt(fromTop) + "px";
+            console.log(scrollY);
+        });
+        window.addEventListener("click", () => {
+            if (cursor.classList.contains("click")) {
+                cursor.classList.remove("click");
+                void cursor.offsetWidth;
+                // trigger a DOM reflow
+                cursor.classList.add("click");
+            } else {
+                cursor.classList.add("click");
+            }
+        });
+    </script>
+</body>
+
+</html>
